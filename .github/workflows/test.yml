@@ -20,6 +20,7 @@ jobs:
     - name: Update paper list
       run: |
         pip install bs4
+        pip install lxml
         cd py
         bash RunForContests
 
