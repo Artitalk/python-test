@@ -19,8 +19,8 @@ jobs:
 
     - name: Update paper list
       run: |
-        cd test
-        python test.py
+        cd py
+        bash RunForContests
 
     - name: commit
       run: |
