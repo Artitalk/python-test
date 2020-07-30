@@ -1,6 +1,5 @@
 name: Json update
-on: 
-  schedule: '* * * * *'
+on: push
 jobs: 
   Contest: 
     name: pull update
