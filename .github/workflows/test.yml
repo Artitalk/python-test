@@ -10,23 +10,22 @@ jobs:
     - name: checkout actions
     - uses: actions/checkout@v1
 
-    - name: Set up Python 3.7
+    - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
-		
+        python-version: 3.8
+    - name: Install requests
+      run: pip install requests
     - name: Update paper list
       run: |
-        cd testpy
+        cd test
         python test.py
-    
     - name: commit
       run: |
         git config --global user.email 1120437716@qq.com
         git config --global user.name Drew233
         git add .
         git commit -m "update" -a
-		
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
