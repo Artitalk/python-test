@@ -19,6 +19,7 @@ jobs:
 
     - name: Update paper list
       run: |
+        pip install bs4
         cd py
         bash RunForContests
 
